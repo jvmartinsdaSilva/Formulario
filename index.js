@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
     })
 
     if (formValid) {
-        console.log('true')
+        console.log('Cadastro valído')
     }
 })
 
