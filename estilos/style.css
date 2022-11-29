@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ColorBC1: #6382BF;
+    --ColorBC2: #184A8C;
+    --FormColor: #EDF2F8;
+    --ColorSucess: #00B050;
+    --ColorErr: #8C1F28;
+}
+
+body{
+    height: 100vh;
+    background: var(--ColorBC1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form{
+    margin: 50px auto;
+    width: 80vw;
+    min-height: 450px;
+    height: auto;
+    background: var(--FormColor);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #00000069;
+    padding: 2px;
+    display: block;
+    
+}
+
+.form header{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: var(--ColorBC2);
+    font-weight: bold;
+}
+
+.container{
+    margin: 20px 10px;
+}
+
+.content{
+    margin-top: 20px;
+    font-weight: 540;
+}
+
+.content p{
+    margin: 5px;
+}
+
+.form input{
+    width: 80%;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    display: block; 
+}
+
+
+.form button{
+    display: block;
+    width: 90%;
+    height: 40px;
+    font-size: bold;
+    font-size: 1.3em;
+    color: white;
+    background: var(--ColorBC2);
+    border: none;
+    border-radius: 5px;
+    margin: 50px auto ;
+    cursor: pointer;
+}
+
+.form button:active{
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+
+
+.PasswordConfigs{
+    margin: 10px;   
+}
+
+.PasswordConfigs ul{
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.PasswordConfigs  li{
+    margin: 5px;
+    list-style-type: '❌';
+    font-weight: bold;
+    
+}
+
+.PasswordConfigs li.error{
+    list-style-type: '❌';
+    color: var(--ColorErr);
+    
+}
+
+.PasswordConfigs li.success{
+    list-style-type:  '✔';
+    color: var(--ColorSucess);
+}
+
+
+
+
+
+.content.success{
+    color: var(--ColorSucess);
+    font-weight: bold;
+}
+.content.success > input{
+    border: 2px solid var(--ColorSucess);
+}
+
+
+.content.err{
+    color: var(--ColorErr);
+    font-weight: bold;
+}
+.content.err > input{
+    border: 2px solid var(--ColorErr);
+}

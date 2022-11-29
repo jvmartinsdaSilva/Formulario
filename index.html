@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilos/style.css">
+
+</head>
+
+<body>
+    <form action="" method="post" class="form" id="form">
+        <header>
+            <h1>Cadastro</h1>
+        </header>
+        <div class="container">
+            <div class="content">
+                <label for="iUserName">Nome do usuário:</label>
+                <input type="text" name="Name" id="iUserName" placeholder="Seu nome:" oninput="CheckForm()">
+                <p class="Message"></p>
+            </div>
+
+            <div class="content">
+                <label for="iEmail">Seu email: </label>
+                <input type="email" name="email" id="iEmail" placeholder="Digite seu email" oninput="CheckForm()">
+                <p class="Message"></p>
+            </div>
+
+            <div class="content">
+                <label for="iPassword">Digite sua senha: </label>
+                <input type="password" name="iPassword" id="iPassword" placeholder="Digite sua senha: "
+                    oninput="CheckForm()">
+                <p class="Message"></p>
+                <div class="PasswordConfigs">
+                    <ul>
+                        <li class="PasswordConfig" id="passwordLength"> Deve ter no minímo 8 caracteres</li>
+                        <li class="PasswordConfig" id="passwordNumber">Deve conter 1 número</li>
+                        <li class="PasswordConfig" id="passwordSpecial">Deve conter 1 caractere especial</li>
+                        <li class="PasswordConfig" id="passwordUpperCase">Deve conter 1 Letra maiúsculas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="iConfirm">Confirme sua senha</label>
+                <input type="password" name="passwordConfirm" id="iConfirm" placeholder="Confirme sua senha: "
+                    oninput="CheckForm()">
+                <p class="Message"></p>
+            </div>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
