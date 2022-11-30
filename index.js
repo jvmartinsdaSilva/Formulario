@@ -121,7 +121,7 @@ function CheckPassword(PasswordValue) {
 
 
 function PasswordConfirmation(PasswordValue, PasswordConfirmValue) {
-    if (PasswordValue != PasswordConfirmValue) {
+    if (PasswordValue != PasswordConfirmValue || PasswordValue === '') {
         inputError(PasswordConfirm, 'As senhas não conferem')
     } else {
         inputSuccess(PasswordConfirm)
