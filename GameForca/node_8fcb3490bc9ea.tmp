@@ -1,0 +1,9 @@
+
+const test = (x) => {
+    for(i = 0; i < x; i++){
+        x++
+        console.log(x)
+    }
+}
+
+test(5)
