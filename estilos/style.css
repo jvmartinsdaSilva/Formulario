@@ -9,6 +9,7 @@
 :root{
     --ColorBC1: #6382BF;
     --ColorBC2: #184A8C;
+    --ColorHover: #042d64;
     --FormColor: #EDF2F8;
     --ColorSucess: #00B050;
     --ColorErr: #8C1F28;
@@ -77,6 +78,11 @@ body{
     border-radius: 5px;
     margin: 50px auto ;
     cursor: pointer;
+    transition: .5s;
+}
+
+.form button:hover{
+    background: var(--ColorHover);
 }
 
 .form button:active{
