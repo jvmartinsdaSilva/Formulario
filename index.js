@@ -11,18 +11,20 @@ form.addEventListener('submit', (e) => {
 
     CheckForm()
 
-
     const formValid = [...formsConfigs].every((formConfig) => {
         return formConfig.className === 'content success'
     })
 
-    if (formValid) {
-        console.log('Cadastro valído')
-    }
+    if (formValid) console.log('Cadastro valído')
 })
 
-function CheckForm() {
+UserName.addEventListener('keypress', () => CheckUserName(UserName.value))
+Email.addEventListener('keypress', () => CheckEmail(Email.value))
+Password.addEventListener('keyup', () => CheckPassword(Password.value))
+PasswordConfirm.addEventListener('keypress', () => PasswordConfirmation(Password.value, PasswordConfirm.value))
 
+
+function CheckForm() {
     CheckUserName(UserName.value)
     CheckEmail(Email.value)
     CheckPassword(Password.value)
@@ -119,7 +121,6 @@ function CheckPassword(PasswordValue) {
 
 }
 
-
 function PasswordConfirmation(PasswordValue, PasswordConfirmValue) {
     if (PasswordValue != PasswordConfirmValue || PasswordValue === '') {
         inputError(PasswordConfirm, 'As senhas não conferem')
@@ -127,7 +128,6 @@ function PasswordConfirmation(PasswordValue, PasswordConfirmValue) {
         inputSuccess(PasswordConfirm)
     }
 }
-
 
 
 
